@@ -1,0 +1,12 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000" >
+
+    <com.zhenai.slidingcard.DiscoverContainerView
+        android:id="@+id/contentview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.zhenai.slidingcard.DiscoverContainerView>
+
+</RelativeLayout>
