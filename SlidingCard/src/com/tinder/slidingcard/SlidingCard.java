@@ -1,4 +1,4 @@
-package com.zhenai.slidingcard;
+package com.tinder.slidingcard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +31,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.animation.Interpolator;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
@@ -168,6 +169,12 @@ public class SlidingCard extends LinearLayout {
 	private OnPageChangeListener mOnPageChangeListener;
 
 	private int listIndex;
+
+	private View contentView;
+
+	private ImageView headImageView;
+
+	private int bgColorResId;
 
 	public int getListIndex() {
 		return listIndex;
@@ -372,13 +379,11 @@ public class SlidingCard extends LinearLayout {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-
 		int itemHeight = getContext().getResources().getDimensionPixelSize(
-				R.dimen.main_item_height);
+				R.dimen.card_item_height);
 		int width = getDefaultSize(0, widthMeasureSpec);
 		int height = getDefaultSize(0, heightMeasureSpec);
 		setMeasuredDimension(width, itemHeight);
-
 		final int contentWidth = getChildMeasureSpec(widthMeasureSpec, 0, width);
 		final int contentHeight = getChildMeasureSpec(heightMeasureSpec, 0,
 				height);
@@ -1429,14 +1434,6 @@ public class SlidingCard extends LinearLayout {
 
 	@Override
 	protected void dispatchDraw(Canvas canvas) {
-		// canvas.save();
-		// float percentOpen = getPercentOpen();
-		// float scale = (float) (1 - percentOpen * 0.1);
-		// canvas.scale(scale, scale, canvas.getWidth() / 2, canvas.getHeight()
-		// / 2);
-		// super.dispatchDraw(canvas);
-		// drawDim(canvas, percentOpen);
-		// canvas.restore();
 		final int count = getChildCount();
 		for (int i = 0; i < count; i++) {
 			final View child = getChildAt(i);
@@ -1450,31 +1447,39 @@ public class SlidingCard extends LinearLayout {
 		}
 	}
 
-	// private boolean touchable = true;
-	//
-	// public void setTouchable(boolean b) {
-	// if (touchable != b) {
-	// touchable = b;
-	// if (touchable) {
-	// setFocusable(true);
-	// setFocusableInTouchMode(true);
-	// } else {
-	// setFocusable(false);
-	// setFocusableInTouchMode(false);
-	// }
-	// }
-	// }
-	//
-	// public boolean isTouchable() {
-	// return touchable;
-	// }
-	//
-	// @Override
-	// public boolean dispatchTouchEvent(MotionEvent ev) {
-	// if (!touchable)
-	// return false;
-	// return super.dispatchTouchEvent(ev);
-	// }
+	/**
+	 * 初始化控件数据
+	 */
+	public void initCardChildView() {
+		headImageView = (ImageView) findViewById(R.id.imageview);
+		contentView = findViewById(R.id.sliding_card_content_view);
+		headImageView.setBackgroundColor(getResources().getColor(bgColorResId));
+	}
+
+	/**
+	 * 传入控件需要赋值的参数
+	 * 
+	 * @param userName
+	 */
+	public void initView(int bgColor) {
+		this.bgColorResId = bgColor;
+		initCardChildView();
+	}
+
+	public View getContentView() {
+		return contentView;
+	}
+	/**
+	 * 返回赋值给该对象的值
+	 * @return
+	 */
+	public int getData(){
+		return bgColorResId;
+	}
+	
+	public void doSomeThing(float offset, int feelType) {
+		//implements 滑动的时候 界面如果需要渐变等 在此处理
+	}
 
 	private boolean isLowQuality = false;
 

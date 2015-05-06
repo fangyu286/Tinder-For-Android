@@ -3,10 +3,11 @@
     android:layout_height="fill_parent"
     android:background="#000000" >
 
-    <com.zhenai.slidingcard.DiscoverContainerView
+    <com.tinder.slidingcard.DiscoverContainerView
         android:id="@+id/contentview"
+        android:layout_marginTop="80dip"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
-    </com.zhenai.slidingcard.DiscoverContainerView>
+    </com.tinder.slidingcard.DiscoverContainerView>
 
 </RelativeLayout>

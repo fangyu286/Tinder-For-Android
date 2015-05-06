@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.zhenai.slidingcard;
+package com.tinder.slidingcard;
 
 public final class R {
     public static final class attr {
@@ -98,12 +98,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int sc_viewContent=0x7f010002;
     }
+    public static final class color {
+        public static final int black=0x7f040000;
+        public static final int blue=0x7f040002;
+        public static final int green=0x7f040003;
+        public static final int red=0x7f040004;
+        public static final int white=0x7f040001;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
-        public static final int main_item_height=0x7f040002;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int card_item_height=0x7f050003;
+        public static final int card_item_margin=0x7f050004;
+        public static final int card_item_margin_left_right=0x7f050005;
+        public static final int guess_view_height=0x7f050007;
+        public static final int hot_view_width=0x7f050006;
+        public static final int main_item_height=0x7f050002;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
@@ -111,26 +123,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int testttt=0x7f020002;
     }
     public static final class id {
-        public static final int contentview=0x7f070007;
-        public static final int fullscreen=0x7f070005;
-        public static final int imageview=0x7f070006;
-        public static final int left=0x7f070000;
-        public static final int leftRight=0x7f070002;
-        public static final int margin=0x7f070004;
-        public static final int none=0x7f070003;
-        public static final int right=0x7f070001;
+        public static final int contentview=0x7f080008;
+        public static final int fullscreen=0x7f080005;
+        public static final int imageview=0x7f080007;
+        public static final int left=0x7f080000;
+        public static final int leftRight=0x7f080002;
+        public static final int margin=0x7f080004;
+        public static final int none=0x7f080003;
+        public static final int right=0x7f080001;
+        public static final int sliding_card_content_view=0x7f080006;
     }
     public static final class layout {
         public static final int activity_item=0x7f030000;
         public static final int activity_main=0x7f030001;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050001;
+        public static final int action_settings=0x7f060002;
+        public static final int app_name=0x7f060000;
+        public static final int hello_world=0x7f060001;
     }
     public static final class style {
-        public static final int AppTheme=0x7f060000;
+        public static final int AppTheme=0x7f070000;
     }
     public static final class styleable {
         /** Attributes that can be used with a SlidingCard.
@@ -139,17 +152,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SlidingCard_sc_leftFadeDegree com.zhenai.slidingcard:sc_leftFadeDegree}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_leftFadeEnabled com.zhenai.slidingcard:sc_leftFadeEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_leftShadowDrawable com.zhenai.slidingcard:sc_leftShadowDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_leftShadowWidth com.zhenai.slidingcard:sc_leftShadowWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_rightFadeDegree com.zhenai.slidingcard:sc_rightFadeDegree}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_rightFadeEnabled com.zhenai.slidingcard:sc_rightFadeEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_rightShadowDrawable com.zhenai.slidingcard:sc_rightShadowDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_rightShadowWidth com.zhenai.slidingcard:sc_rightShadowWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_slidingMode com.zhenai.slidingcard:sc_slidingMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_touchMode com.zhenai.slidingcard:sc_touchMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingCard_sc_viewContent com.zhenai.slidingcard:sc_viewContent}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_leftFadeDegree com.tinder.slidingcard:sc_leftFadeDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_leftFadeEnabled com.tinder.slidingcard:sc_leftFadeEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_leftShadowDrawable com.tinder.slidingcard:sc_leftShadowDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_leftShadowWidth com.tinder.slidingcard:sc_leftShadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_rightFadeDegree com.tinder.slidingcard:sc_rightFadeDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_rightFadeEnabled com.tinder.slidingcard:sc_rightFadeEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_rightShadowDrawable com.tinder.slidingcard:sc_rightShadowDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_rightShadowWidth com.tinder.slidingcard:sc_rightShadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_slidingMode com.tinder.slidingcard:sc_slidingMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_touchMode com.tinder.slidingcard:sc_touchMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingCard_sc_viewContent com.tinder.slidingcard:sc_viewContent}</code></td><td></td></tr>
            </table>
            @see #SlidingCard_sc_leftFadeDegree
            @see #SlidingCard_sc_leftFadeEnabled
@@ -169,7 +182,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010008, 0x7f010009, 0x7f01000a
         };
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_leftFadeDegree}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_leftFadeDegree}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -179,11 +192,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhenai.slidingcard:sc_leftFadeDegree
+          @attr name com.tinder.slidingcard:sc_leftFadeDegree
         */
         public static final int SlidingCard_sc_leftFadeDegree = 8;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_leftFadeEnabled}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_leftFadeEnabled}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -193,21 +206,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhenai.slidingcard:sc_leftFadeEnabled
+          @attr name com.tinder.slidingcard:sc_leftFadeEnabled
         */
         public static final int SlidingCard_sc_leftFadeEnabled = 7;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_leftShadowDrawable}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_leftShadowDrawable}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zhenai.slidingcard:sc_leftShadowDrawable
+          @attr name com.tinder.slidingcard:sc_leftShadowDrawable
         */
         public static final int SlidingCard_sc_leftShadowDrawable = 3;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_leftShadowWidth}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_leftShadowWidth}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -219,11 +232,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhenai.slidingcard:sc_leftShadowWidth
+          @attr name com.tinder.slidingcard:sc_leftShadowWidth
         */
         public static final int SlidingCard_sc_leftShadowWidth = 4;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_rightFadeDegree}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_rightFadeDegree}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -233,11 +246,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhenai.slidingcard:sc_rightFadeDegree
+          @attr name com.tinder.slidingcard:sc_rightFadeDegree
         */
         public static final int SlidingCard_sc_rightFadeDegree = 10;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_rightFadeEnabled}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_rightFadeEnabled}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -247,21 +260,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhenai.slidingcard:sc_rightFadeEnabled
+          @attr name com.tinder.slidingcard:sc_rightFadeEnabled
         */
         public static final int SlidingCard_sc_rightFadeEnabled = 9;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_rightShadowDrawable}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_rightShadowDrawable}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zhenai.slidingcard:sc_rightShadowDrawable
+          @attr name com.tinder.slidingcard:sc_rightShadowDrawable
         */
         public static final int SlidingCard_sc_rightShadowDrawable = 5;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_rightShadowWidth}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_rightShadowWidth}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -273,11 +286,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zhenai.slidingcard:sc_rightShadowWidth
+          @attr name com.tinder.slidingcard:sc_rightShadowWidth
         */
         public static final int SlidingCard_sc_rightShadowWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_slidingMode}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_slidingMode}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -291,11 +304,11 @@ containing a value of this type.
 <tr><td><code>right</code></td><td>1</td><td></td></tr>
 <tr><td><code>leftRight</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.zhenai.slidingcard:sc_slidingMode
+          @attr name com.tinder.slidingcard:sc_slidingMode
         */
         public static final int SlidingCard_sc_slidingMode = 0;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_touchMode}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_touchMode}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
@@ -309,17 +322,17 @@ containing a value of this type.
 <tr><td><code>margin</code></td><td>1</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.zhenai.slidingcard:sc_touchMode
+          @attr name com.tinder.slidingcard:sc_touchMode
         */
         public static final int SlidingCard_sc_touchMode = 1;
         /**
-          <p>This symbol is the offset where the {@link com.zhenai.slidingcard.R.attr#sc_viewContent}
+          <p>This symbol is the offset where the {@link com.tinder.slidingcard.R.attr#sc_viewContent}
           attribute's value can be found in the {@link #SlidingCard} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zhenai.slidingcard:sc_viewContent
+          @attr name com.tinder.slidingcard:sc_viewContent
         */
         public static final int SlidingCard_sc_viewContent = 2;
     };

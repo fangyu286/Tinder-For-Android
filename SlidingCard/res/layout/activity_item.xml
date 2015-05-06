@@ -1,16 +1,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="@dimen/card_item_height" >
 
-    <ImageView
-        android:id="@+id/imageview"
+    <RelativeLayout
+        android:id="@+id/sliding_card_content_view"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/main_item_height"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:background="#ffffff"
-        android:scaleType="centerCrop"
-        android:src="@drawable/testttt" />
+        android:layout_marginRight="20dip">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/main_item_height"
+            android:layout_marginLeft="@dimen/card_item_margin"
+            android:layout_marginRight="@dimen/card_item_margin"
+            android:background="#ffffff"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
 
 </RelativeLayout>
